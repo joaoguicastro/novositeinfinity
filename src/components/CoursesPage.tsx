@@ -1,6 +1,34 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Clock, Users, BookOpen } from 'lucide-react';
+import informaticaprofissionalizante from '../assets/cursos/informaticaprof.jpg'
+import desenvolvedroFullStack from '../assets/cursos/desenvolvedorfullstack.jpg'
+import desenvolvimentoGames from '../assets/cursos/desenvolvedordegames.webp'
+import edicaoVideo from '../assets/cursos/edicaodevideo.jpg'
+import designerGrafico from '../assets/cursos/designgrafico.png'
+import marketingDigital from '../assets/cursos/marketingdigital.jpg'
+import empreendedorismo from '../assets/cursos/empreendedorismo.png'
+import auxadm from '../assets/cursos/auxadm.png'
+import atendenteFarmacia from '../assets/cursos/atendentefarmacia.jpg'
+import aph from '../assets/cursos/atendenteprehospitalar.png' 
+import heroimirim from '../assets/cursos/bombeiromirim.avif'
+import auxvet from '../assets/cursos/auxiliarvet.jpg' 
+import coletaSangue from '../assets/cursos/coletasangue.webp'
+import agentecomunitario from '../assets/cursos/agentecomunitario.jpg'
+import agenteendemias from '../assets/cursos/agenteendemias.jpg'
+import agenteportuario from '../assets/cursos/agenteportuario.jpg' 
+import auxnecropsia from '../assets/cursos/auxiliarnecropsia.jpg' 
+import auxRH from '../assets/cursos/auxiliarrh.jpg' 
+import auxSala from '../assets/cursos/auxiliarsala.jpg' 
+import saudebucal from '../assets/cursos/saudebucao.webp'
+import auxSegurancaTrabalho from '../assets/cursos/auxiliarseguranca.jpeg' 
+import auxLaboratorio from '../assets/cursos/auxiliardelaboratorio.jpg'
+import cuidadorIdosos from '../assets/cursos/cuidadordeidosos.png'
+import defesaCivil from '../assets/cursos/defesacivil.jpeg'
+import fiscalMeioAmbiente from '../assets/cursos/ficaldomeioambiente.png'
+import gestaoHospitalar from '../assets/cursos/gestaohospitalar.jpg' 
+import guardamunicipal from '../assets/cursos/guardamunicipal.jpg'
+
 import {
   PageContainer,
   CoursesSection,
@@ -30,15 +58,15 @@ const CoursesPage = () => {
   const [visibleCourses, setVisibleCourses] = useState(15);
   const navigate = useNavigate(); // Hook para navegação
 
-  const categories = ['Todos', 'Tecnologia', 'Negócios', 'Saude'];
+  const categories = ['Todos', 'Tecnologia', 'Negócios', 'Saúde'];
 
   // Lista completa de 28 cursos
   const allCourses = [
     {
       id: 1,
-      title: "Desenvolvimento Web Full Stack",
+      title: "Informatica Profissionalizante",
       category: "Tecnologia",
-      image: "/curso-web.jpg",
+      image: informaticaprofissionalizante,
       duration: "6 meses",
       students: "150",
       modules: "12",
@@ -47,9 +75,9 @@ const CoursesPage = () => {
     },
     {
       id: 2,
-      title: "Marketing Digital Completo",
-      category: "Marketing",
-      image: "/curso-marketing.jpg",
+      title: "Desenvolvimento Full-Stack",
+      category: "Tecnologia",
+      image: desenvolvedroFullStack,
       duration: "3 meses",
       students: "230",
       modules: "8",
@@ -58,9 +86,9 @@ const CoursesPage = () => {
     },
     {
       id: 3,
-      title: "Design UI/UX",
-      category: "Design",
-      image: "/curso-design.jpg",
+      title: "Desenvolvimento de Games",
+      category: "Tecnologia",
+      image: desenvolvimentoGames,
       duration: "4 meses",
       students: "120",
       modules: "10",
@@ -69,9 +97,9 @@ const CoursesPage = () => {
     },
     {
       id: 4,
-      title: "Gestão de Projetos",
-      category: "Negócios",
-      image: "/curso-gestao.jpg",
+      title: "Edicao de Video",
+      category: "Tecnologia",
+      image: edicaoVideo,
       duration: "3 meses",
       students: "180",
       modules: "8",
@@ -80,9 +108,9 @@ const CoursesPage = () => {
     },
     {
       id: 5,
-      title: "Programação em Python",
+      title: "Designer Grafico",
       category: "Tecnologia",
-      image: "/curso-python.jpg",
+      image: designerGrafico,
       duration: "4 meses",
       students: "200",
       modules: "10",
@@ -91,9 +119,9 @@ const CoursesPage = () => {
     },
     {
       id: 6,
-      title: "Análise de Dados",
+      title: "Marketing Digital",
       category: "Tecnologia",
-      image: "/curso-dados.jpg",
+      image: marketingDigital,
       duration: "5 meses",
       students: "130",
       modules: "12",
@@ -102,9 +130,9 @@ const CoursesPage = () => {
     },
     {
       id: 7,
-      title: "Contabilidade para Pequenos Negócios",
+      title: "Empreendedorismo",
       category: "Negócios",
-      image: "/curso-contabilidade.jpg",
+      image: empreendedorismo,
       duration: "2 meses",
       students: "90",
       modules: "6",
@@ -113,9 +141,9 @@ const CoursesPage = () => {
     },
     {
       id: 8,
-      title: "Design Gráfico Profissional",
-      category: "Design",
-      image: "/curso-grafico.jpg",
+      title: "Auxiliar Administrativo",
+      category: "Negócios",
+      image: auxadm,
       duration: "4 meses",
       students: "160",
       modules: "10",
@@ -124,9 +152,9 @@ const CoursesPage = () => {
     },
     {
       id: 9,
-      title: "Social Media e Gestão de Redes Sociais",
-      category: "Marketing",
-      image: "/curso-social.jpg",
+      title: "Atendente de Farmacia",
+      category: "Saúde",
+      image: atendenteFarmacia,
       duration: "3 meses",
       students: "210",
       modules: "8",
@@ -135,9 +163,9 @@ const CoursesPage = () => {
     },
     {
       id: 10,
-      title: "Inglês para Negócios",
-      category: "Educação",
-      image: "/curso-ingles.jpg",
+      title: "Atendimento Pre-Hospitalar",
+      category: "Saúde",
+      image: aph,
       duration: "6 meses",
       students: "140",
       modules: "24",
@@ -146,9 +174,9 @@ const CoursesPage = () => {
     },
     {
       id: 11,
-      title: "Desenvolvimento Mobile com React Native",
-      category: "Tecnologia",
-      image: "/curso-mobile.jpg",
+      title: "Heroi Mirim",
+      category: "Saúde",
+      image: heroimirim,
       duration: "5 meses",
       students: "110",
       modules: "12",
@@ -157,9 +185,9 @@ const CoursesPage = () => {
     },
     {
       id: 12,
-      title: "Fotografia Profissional",
-      category: "Design",
-      image: "/curso-fotografia.jpg",
+      title: "Auxiliar Veterinario",
+      category: "Saúde",
+      image: auxvet,
       duration: "3 meses",
       students: "95",
       modules: "8",
@@ -168,9 +196,9 @@ const CoursesPage = () => {
     },
     {
       id: 13,
-      title: "E-commerce e Vendas Online",
-      category: "Negócios",
-      image: "/curso-ecommerce.jpg",
+      title: "Coleta de Sangue",
+      category: "Saúde",
+      image: coletaSangue,
       duration: "3 meses",
       students: "170",
       modules: "9",
@@ -179,9 +207,9 @@ const CoursesPage = () => {
     },
     {
       id: 14,
-      title: "Edição de Vídeo Profissional",
-      category: "Design",
-      image: "/curso-video.jpg",
+      title: "Agente Comunitario",
+      category: "Saúde",
+      image: agentecomunitario,
       duration: "4 meses",
       students: "85",
       modules: "10",
@@ -190,9 +218,9 @@ const CoursesPage = () => {
     },
     {
       id: 15,
-      title: "Copywriting e Redação Persuasiva",
-      category: "Marketing",
-      image: "/curso-copy.jpg",
+      title: "Agente de Endemias",
+      category: "Saúde",
+      image: agenteendemias,
       duration: "2 meses",
       students: "220",
       modules: "6",
@@ -201,9 +229,9 @@ const CoursesPage = () => {
     },
     {
       id: 16,
-      title: "Inteligência Artificial Aplicada",
-      category: "Tecnologia",
-      image: "/curso-ia.jpg",
+      title: "Agente Portuario",
+      category: "Negócios",
+      image: agenteportuario,
       duration: "4 meses",
       students: "95",
       modules: "10",
@@ -212,9 +240,9 @@ const CoursesPage = () => {
     },
     {
       id: 17,
-      title: "Liderança e Gestão de Equipes",
-      category: "Negócios",
-      image: "/curso-lideranca.jpg",
+      title: "Auxiliar de Necropsia",
+      category: "Saúde",
+      image: auxnecropsia,
       duration: "3 meses",
       students: "130",
       modules: "8",
@@ -223,9 +251,9 @@ const CoursesPage = () => {
     },
     {
       id: 18,
-      title: "Produção Musical",
-      category: "Design",
-      image: "/curso-musica.jpg",
+      title: "Auxiliar de RH",
+      category: "Negócios",
+      image: auxRH,
       duration: "5 meses",
       students: "75",
       modules: "15",
@@ -234,9 +262,9 @@ const CoursesPage = () => {
     },
     {
       id: 19,
-      title: "SEO e Marketing de Conteúdo",
-      category: "Marketing",
-      image: "/curso-seo.jpg",
+      title: "Auxiliar de Sala",
+      category: "Negócios",
+      image: auxSala,
       duration: "3 meses",
       students: "180",
       modules: "9",
@@ -245,9 +273,9 @@ const CoursesPage = () => {
     },
     {
       id: 20,
-      title: "Administração Financeira",
-      category: "Negócios",
-      image: "/curso-financas.jpg",
+      title: "Auxiliar de Saúde Bucal",
+      category: "Saúde",
+      image: saudebucal,
       duration: "4 meses",
       students: "110",
       modules: "10",
@@ -256,9 +284,9 @@ const CoursesPage = () => {
     },
     {
       id: 21,
-      title: "Cibersegurança Básica",
-      category: "Tecnologia",
-      image: "/curso-seguranca.jpg",
+      title: "Auxiliar de Seguranca do Trabalho",
+      category: "Negócios",
+      image: auxSegurancaTrabalho,
       duration: "3 meses",
       students: "90",
       modules: "8",
@@ -267,9 +295,9 @@ const CoursesPage = () => {
     },
     {
       id: 22,
-      title: "Ilustração Digital",
-      category: "Design",
-      image: "/curso-ilustracao.jpg",
+      title: "Auxiliar de Laboratorio",
+      category: "Saúde",
+      image: auxLaboratorio,
       duration: "4 meses",
       students: "85",
       modules: "10",
@@ -278,9 +306,9 @@ const CoursesPage = () => {
     },
     {
       id: 23,
-      title: "Técnicas de Vendas Avançadas",
-      category: "Negócios",
-      image: "/curso-vendas.jpg",
+      title: "Cuidador de Idosos",
+      category: "Saúde",
+      image: cuidadorIdosos,
       duration: "2 meses",
       students: "150",
       modules: "6",
@@ -289,9 +317,9 @@ const CoursesPage = () => {
     },
     {
       id: 24,
-      title: "Desenvolvimento de Games",
-      category: "Tecnologia",
-      image: "/curso-games.jpg",
+      title: "Defesa Civil",
+      category: "Saúde",
+      image: defesaCivil,
       duration: "6 meses",
       students: "70",
       modules: "15",
@@ -300,9 +328,9 @@ const CoursesPage = () => {
     },
     {
       id: 25,
-      title: "Primeiros Socorros e Saúde Básica",
+      title: "Fiscal do Meio Ambeiente",
       category: "Saúde",
-      image: "/curso-primeirossocorros.jpg",
+      image: fiscalMeioAmbiente,
       duration: "2 meses",
       students: "120",
       modules: "6",
@@ -311,9 +339,9 @@ const CoursesPage = () => {
     },
     {
       id: 26,
-      title: "Gestão de Mídias Sociais",
-      category: "Marketing",
-      image: "/curso-midias.jpg",
+      title: "Gestao Hospitalar",
+      category: "Saúde",
+      image: gestaoHospitalar,
       duration: "3 meses",
       students: "190",
       modules: "8",
@@ -322,31 +350,20 @@ const CoursesPage = () => {
     },
     {
       id: 27,
-      title: "Modelagem 3D",
-      category: "Design",
-      image: "/curso-3d.jpg",
+      title: "Guarda Municipal",
+      category: "Saúde",
+      image: guardamunicipal,
       duration: "5 meses",
       students: "65",
       modules: "12",
       price: "1.397,00",
       installments: "12x de R$ 116,42"
     },
-    {
-      id: 28,
-      title: "Excel Avançado para Negócios",
-      category: "Negócios",
-      image: "/curso-excel.jpg",
-      duration: "3 meses",
-      students: "200",
-      modules: "8",
-      price: "897,00",
-      installments: "10x de R$ 89,70"
-    },
   ];
 
   const handleLoadMore = () => {
     // Mostra todos os 28 cursos quando clicar no botão
-    setVisibleCourses(28);
+    setVisibleCourses(27);
   };
 
   // Função para navegar para a página de demonstração do curso

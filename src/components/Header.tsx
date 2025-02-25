@@ -24,7 +24,6 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
     { text: 'Início', href: '/' },
     { text: 'Cursos', href: '/cursos' },
     { text: 'Sobre', href: '/sobre' },
-    { text: 'Blog', href: '/blog' }
   ];
 
   const toggleMobileMenu = () => {

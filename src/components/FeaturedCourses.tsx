@@ -1,6 +1,9 @@
 // components/FeaturedCourses.tsx
 import React from 'react';
 import { Clock, Users, Star } from 'lucide-react';
+import desenvolvedroFullStack from '../assets/cursos/desenvolvedorfullstack.jpg'
+import marketingDigital from '../assets/cursos/marketingdigital.jpg'
+import empreendedorismo from '../assets/cursos/empreendedorismo.png'
 import {
   CoursesSection,
   SectionHeader,
@@ -33,7 +36,7 @@ const FeaturedCourses: React.FC = () => {
       id: 1,
       title: "Desenvolvimento Web Full Stack",
       category: "Tecnologia",
-      image: "/path/to/web-dev-image.jpg",
+      image: desenvolvedroFullStack,
       duration: "6 meses",
       students: 1500,
       rating: 4.8,
@@ -42,9 +45,9 @@ const FeaturedCourses: React.FC = () => {
     },
     {
       id: 2,
-      title: "Marketing Digital Completo",
-      category: "Marketing",
-      image: "/path/to/marketing-image.jpg",
+      title: "Marketing Digital",
+      category: "Tecnologia",
+      image: marketingDigital,
       duration: "4 meses",
       students: 1200,
       rating: 4.7,
@@ -53,9 +56,9 @@ const FeaturedCourses: React.FC = () => {
     },
     {
       id: 3,
-      title: "Gestão de Projetos",
+      title: "Empreendedorismo",
       category: "Negócios",
-      image: "/path/to/management-image.jpg",
+      image: empreendedorismo,
       duration: "3 meses",
       students: 980,
       rating: 4.9,
