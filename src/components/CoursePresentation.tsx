@@ -28,7 +28,6 @@ import {
   InstructorName,
   InstructorBio,
   EnrollButton,
-  PriceTag,
   TestimonialsSection,
   TestimonialCard,
   TestimonialText,
@@ -60,8 +59,8 @@ interface Course {
   duration: string;
   lessons: number;
   level: string;
-  price: string;
-  priceInstallment: string;
+  price?: string;
+  priceInstallment?: string;
   image: string;
   description: string;
   modules: Module[];
@@ -107,189 +106,158 @@ const CoursePresentation: React.FC = () => {
   // Simulação de dados - normalmente seriam carregados de uma API
   const allCourses: Course[] = [
     {
-      id: 1,
-      title: "Desenvolvimento Web Full Stack",
-      subtitle: "Torne-se um desenvolvedor completo em menos de 6 meses",
-      duration: "180 horas",
-      lessons: 120,
-      level: "Intermediário",
-      price: "R$ 1.997,00",
-      priceInstallment: "12x de R$ 199,70",
-      image: "/images/course-fullstack.jpg",
-      description: `
-        Este curso completo de Desenvolvimento Web Full Stack vai te transformar em um profissional 
-        pronto para o mercado. Você aprenderá desde os fundamentos de HTML, CSS e JavaScript até 
-        as tecnologias mais avançadas como React, Node.js, TypeScript e bancos de dados SQL e NoSQL.
-        
-        Durante o curso, você desenvolverá projetos práticos e construirá um portfólio impressionante 
-        que demonstrará suas habilidades para potenciais empregadores. Nossos instrutores são 
-        profissionais experientes que trabalham nas melhores empresas de tecnologia do país.
-      `,
-      category: "Tecnologia",
-      modules: [
+      "id": 1,
+      "title": "Informática Profissionalizante",
+      "subtitle": "Domine a informática e amplie suas oportunidades",
+      "duration": "6 meses",
+      "lessons": 120,
+      "level": "Básico a Intermediário",
+      "image": "/images/informatica-profissionalizante.jpg",
+      "description": "Este curso oferece uma formação completa em informática, desde o básico até aplicações avançadas. Você aprenderá sobre sistemas operacionais, pacote Office, internet, segurança digital e introdução à programação.",
+      "category": "Tecnologia",
+      "modules": [
         {
-          id: 1,
-          title: "Fundamentos de Desenvolvimento Web",
-          lessons: [
-            "Introdução ao HTML5",
-            "CSS3 e Design Responsivo",
-            "JavaScript Básico",
-            "Git e GitHub"
+          "id": 1,
+          "title": "Fundamentos de Informática",
+          "lessons": [
+            "Introdução ao Windows",
+            "Pacote Office (Word, Excel, PowerPoint)",
+            "Navegação Segura na Internet",
+            "Introdução à Segurança Digital"
           ]
         },
         {
-          id: 2,
-          title: "Frontend Avançado",
-          lessons: [
-            "React Fundamentos",
-            "Estado e Props",
-            "Hooks e Context API",
-            "TypeScript com React"
+          "id": 2,
+          "title": "Aplicações Avançadas",
+          "lessons": [
+            "Edição de Texto e Planilhas",
+            "Criação de Apresentações Profissionais",
+            "Banco de Dados Básico",
+            "Introdução à Programação"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Desenvolvimento Full-Stack",
+      "subtitle": "Aprenda a desenvolver aplicações completas",
+      "duration": "3 meses",
+      "lessons": 80,
+      "level": "Intermediário",
+      "image": "/images/desenvolvimento-fullstack.jpg",
+      "description": "Este curso ensina as tecnologias essenciais para o desenvolvimento web Full-Stack, incluindo frontend e backend, além de práticas modernas como APIs e bancos de dados.",
+      "category": "Tecnologia",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Frontend",
+          "lessons": [
+            "HTML, CSS e JavaScript",
+            "React e Componentização",
+            "Gestão de Estado com Context API"
           ]
         },
         {
-          id: 3,
-          title: "Backend e APIs",
-          lessons: [
+          "id": 2,
+          "title": "Backend",
+          "lessons": [
             "Node.js e Express",
-            "Bancos de Dados SQL",
-            "MongoDB e NoSQL",
+            "Banco de Dados SQL e NoSQL",
             "Autenticação e Segurança"
           ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Desenvolvimento de Games",
+      "subtitle": "Crie seus próprios jogos do zero",
+      "duration": "4 meses",
+      "lessons": 100,
+      "level": "Intermediário",
+      "image": "/images/desenvolvimento-games.jpg",
+      "description": "Aprenda a criar jogos 2D e 3D utilizando ferramentas como Unity e Unreal Engine, além de conceitos fundamentais de programação para jogos.",
+      "category": "Tecnologia",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos de Game Design",
+          "lessons": [
+            "Introdução ao Desenvolvimento de Jogos",
+            "Motores de Jogos: Unity e Unreal",
+            "Lógica e Algoritmos para Jogos"
+          ]
         },
         {
-          id: 4,
-          title: "Projeto Final e Deploy",
-          lessons: [
-            "Desenvolvimento de Projeto Fullstack",
-            "Deploy e Infraestrutura",
-            "Performance e Otimização",
-            "Preparação para o Mercado"
+          "id": 2,
+          "title": "Programação de Jogos",
+          "lessons": [
+            "C# para Unity",
+            "Física e Animação",
+            "Inteligência Artificial para Jogos"
           ]
         }
       ]
     },
     {
-      id: 2,
-      title: "Marketing Digital Completo",
-      subtitle: "Domine as estratégias de marketing digital mais eficazes",
-      duration: "120 horas",
-      lessons: 80,
-      level: "Iniciante a Intermediário",
-      price: "R$ 997,00",
-      priceInstallment: "10x de R$ 99,70",
-      image: "/curso-marketing.jpg",
-      description: `
-        O curso de Marketing Digital Completo oferece uma abordagem prática e abrangente para 
-        dominar as principais estratégias de marketing online. Você aprenderá como criar campanhas 
-        eficazes, otimizar sua presença digital e aumentar suas conversões.
-
-        Este curso é ideal para empreendedores, profissionais de marketing e qualquer pessoa 
-        que deseje aprimorar suas habilidades no ambiente digital. Com exemplos práticos e estudos 
-        de caso reais, você estará pronto para aplicar o conhecimento imediatamente.
-      `,
-      category: "Marketing",
-      modules: [
+      "id": 4,
+      "title": "Edição de Vídeo",
+      "subtitle": "Crie vídeos profissionais para diversas plataformas",
+      "duration": "3 meses",
+      "lessons": 75,
+      "level": "Iniciante a Intermediário",
+      "image": "/images/edicao-video.jpg",
+      "description": "Aprenda a editar vídeos utilizando softwares como Adobe Premiere e DaVinci Resolve, explorando técnicas de edição, transições e efeitos especiais.",
+      "category": "Tecnologia",
+      "modules": [
         {
-          id: 1,
-          title: "Fundamentos de Marketing Digital",
-          lessons: [
-            "Introdução ao Marketing Digital",
-            "Comportamento do Consumidor Online",
-            "Planejamento de Marketing Digital",
-            "Análise de Mercado e Concorrência"
+          "id": 1,
+          "title": "Fundamentos de Edição",
+          "lessons": [
+            "Introdução ao Adobe Premiere",
+            "Cortes e Transições",
+            "Edição de Áudio e Sincronia"
           ]
         },
         {
-          id: 2,
-          title: "Estratégias de Conteúdo",
-          lessons: [
-            "Content Marketing",
-            "Copywriting para Web",
-            "SEO (Otimização para Motores de Busca)",
-            "Marketing de Conteúdo nas Redes Sociais"
-          ]
-        },
-        {
-          id: 3,
-          title: "Marketing em Mídias Sociais",
-          lessons: [
-            "Estratégias para Facebook e Instagram",
-            "Marketing no LinkedIn",
-            "YouTube e Marketing de Vídeo",
-            "TikTok e Plataformas Emergentes"
-          ]
-        },
-        {
-          id: 4,
-          title: "Publicidade Digital e Analytics",
-          lessons: [
-            "Google Ads e Facebook Ads",
-            "Email Marketing",
-            "Google Analytics",
-            "Métricas e KPIs de Marketing Digital"
+          "id": 2,
+          "title": "Efeitos e Finalização",
+          "lessons": [
+            "Correção de Cor",
+            "Animações e Motion Graphics",
+            "Renderização e Exportação"
           ]
         }
       ]
     },
     {
-      id: 3,
-      title: "Design UI/UX",
-      subtitle: "Crie interfaces intuitivas e experiências memoráveis",
-      duration: "160 horas",
-      lessons: 90,
-      level: "Intermediário",
-      price: "R$ 1.197,00",
-      priceInstallment: "12x de R$ 99,75",
-      image: "/curso-design.jpg",
-      description: `
-        O curso de Design UI/UX oferece uma formação completa para criar interfaces e experiências 
-        de usuário excepcionais. Você aprenderá metodologias de design centrado no usuário, 
-        ferramentas de prototipagem e princípios de design visual.
-
-        Este curso combina teoria e prática, permitindo que você construa um portfólio sólido de projetos 
-        de UI/UX. Nossos instrutores são designers experientes que trabalham em grandes empresas e startups.
-      `,
-      category: "Design",
-      modules: [
+      "id": 5,
+      "title": "Design Gráfico",
+      "subtitle": "Aprenda a criar designs incríveis",
+      "duration": "4 meses",
+      "lessons": 90,
+      "level": "Intermediário",
+      "image": "/images/design-grafico.jpg",
+      "description": "Desenvolva habilidades essenciais em design gráfico, utilizando ferramentas como Photoshop, Illustrator e CorelDRAW para criar materiais visuais impactantes.",
+      "category": "Tecnologia",
+      "modules": [
         {
-          id: 1,
-          title: "Fundamentos de UX Design",
-          lessons: [
-            "Introdução ao Design Centrado no Usuário",
-            "Pesquisa com Usuários",
-            "Personas e Jornadas do Usuário",
-            "Arquitetura de Informação"
+          "id": 1,
+          "title": "Fundamentos do Design",
+          "lessons": [
+            "Teoria das Cores e Tipografia",
+            "Composição e Layout",
+            "Introdução ao Adobe Photoshop"
           ]
         },
         {
-          id: 2,
-          title: "Princípios de UI Design",
-          lessons: [
-            "Fundamentos de Design Visual",
-            "Tipografia e Cores",
-            "Layout e Grid Systems",
-            "Componentes de Interface"
-          ]
-        },
-        {
-          id: 3,
-          title: "Ferramentas e Prototipagem",
-          lessons: [
-            "Figma Avançado",
-            "Adobe XD",
-            "Prototipagem Interativa",
-            "Design Systems"
-          ]
-        },
-        {
-          id: 4,
-          title: "Projetos Práticos e Portfolio",
-          lessons: [
-            "Redesign de Aplicativo",
-            "Projeto de Website Responsivo",
-            "Testes de Usabilidade",
-            "Montagem de Portfolio Profissional"
+          "id": 2,
+          "title": "Criação Profissional",
+          "lessons": [
+            "Edição de Imagens",
+            "Design para Redes Sociais",
+            "Criação de Logotipos e Identidade Visual"
           ]
         }
       ]
@@ -483,11 +451,6 @@ const CoursePresentation: React.FC = () => {
             <CourseDescription>
               {course.description}
             </CourseDescription>
-            
-            <PriceTag>
-              <div className="price-main">{course.price}</div>
-              <div className="price-installment">ou {course.priceInstallment}</div>
-            </PriceTag>
             
             <EnrollButton>
               MATRICULE-SE AGORA

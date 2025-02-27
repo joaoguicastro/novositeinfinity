@@ -28,6 +28,7 @@ import defesaCivil from '../assets/cursos/defesacivil.jpeg'
 import fiscalMeioAmbiente from '../assets/cursos/ficaldomeioambiente.png'
 import gestaoHospitalar from '../assets/cursos/gestaohospitalar.jpg' 
 import guardamunicipal from '../assets/cursos/guardamunicipal.jpg'
+import robotica from '../assets/cursos/robotica.jpeg'
 
 import {
   PageContainer,
@@ -48,7 +49,6 @@ import {
   CourseContent,
   CourseTitle,
   CourseInfo,
-  CoursePrice,
   CourseButton
 } from '../styles/CoursesStyles'
 
@@ -70,8 +70,6 @@ const CoursesPage = () => {
       duration: "6 meses",
       students: "150",
       modules: "12",
-      price: "1.297,00",
-      installments: "12x de R$ 108,08"
     },
     {
       id: 2,
@@ -80,10 +78,7 @@ const CoursesPage = () => {
       image: desenvolvedroFullStack,
       duration: "3 meses",
       students: "230",
-      modules: "8",
-      price: "997,00",
-      installments: "10x de R$ 99,70"
-    },
+      modules: "8",    },
     {
       id: 3,
       title: "Desenvolvimento de Games",
@@ -91,10 +86,7 @@ const CoursesPage = () => {
       image: desenvolvimentoGames,
       duration: "4 meses",
       students: "120",
-      modules: "10",
-      price: "1.197,00",
-      installments: "12x de R$ 99,75"
-    },
+      modules: "10",    },
     {
       id: 4,
       title: "Edicao de Video",
@@ -102,10 +94,7 @@ const CoursesPage = () => {
       image: edicaoVideo,
       duration: "3 meses",
       students: "180",
-      modules: "8",
-      price: "897,00",
-      installments: "10x de R$ 89,70"
-    },
+      modules: "8",    },
     {
       id: 5,
       title: "Designer Grafico",
@@ -113,10 +102,7 @@ const CoursesPage = () => {
       image: designerGrafico,
       duration: "4 meses",
       students: "200",
-      modules: "10",
-      price: "997,00",
-      installments: "10x de R$ 99,70"
-    },
+      modules: "10",    },
     {
       id: 6,
       title: "Marketing Digital",
@@ -125,245 +111,201 @@ const CoursesPage = () => {
       duration: "5 meses",
       students: "130",
       modules: "12",
-      price: "1.497,00",
-      installments: "12x de R$ 124,75"
     },
     {
       id: 7,
+      title: "Robotica",
+      category: "Tecnologia",
+      image: robotica,
+      duration: "5 meses",
+      students: "130",
+      modules: "12",
+    },
+    {
+      id: 8,
       title: "Empreendedorismo",
       category: "Negócios",
       image: empreendedorismo,
       duration: "2 meses",
       students: "90",
-      modules: "6",
-      price: "797,00",
-      installments: "8x de R$ 99,63"
-    },
+      modules: "6",   },
     {
-      id: 8,
+      id: 9,
       title: "Auxiliar Administrativo",
       category: "Negócios",
       image: auxadm,
       duration: "4 meses",
       students: "160",
       modules: "10",
-      price: "1.097,00",
-      installments: "10x de R$ 109,70"
     },
     {
-      id: 9,
+      id: 10,
       title: "Atendente de Farmacia",
       category: "Saúde",
       image: atendenteFarmacia,
       duration: "3 meses",
       students: "210",
-      modules: "8",
-      price: "897,00",
-      installments: "10x de R$ 89,70"
-    },
+      modules: "8",    },
     {
-      id: 10,
+      id: 11,
       title: "Atendimento Pre-Hospitalar",
       category: "Saúde",
       image: aph,
       duration: "6 meses",
       students: "140",
       modules: "24",
-      price: "1.397,00",
-      installments: "12x de R$ 116,42"
     },
     {
-      id: 11,
+      id: 12,
       title: "Heroi Mirim",
       category: "Saúde",
       image: heroimirim,
       duration: "5 meses",
       students: "110",
       modules: "12",
-      price: "1.297,00",
-      installments: "12x de R$ 108,08"
     },
     {
-      id: 12,
+      id: 13,
       title: "Auxiliar Veterinario",
       category: "Saúde",
       image: auxvet,
       duration: "3 meses",
       students: "95",
-      modules: "8",
-      price: "997,00",
-      installments: "10x de R$ 99,70"
-    },
+      modules: "8",    },
     {
-      id: 13,
+      id: 14,
       title: "Coleta de Sangue",
       category: "Saúde",
       image: coletaSangue,
       duration: "3 meses",
       students: "170",
       modules: "9",
-      price: "1.097,00",
-      installments: "10x de R$ 109,70"
     },
     {
-      id: 14,
+      id: 15,
       title: "Agente Comunitario",
       category: "Saúde",
       image: agentecomunitario,
       duration: "4 meses",
       students: "85",
-      modules: "10",
-      price: "1.197,00",
-      installments: "12x de R$ 99,75"
-    },
+      modules: "10",    },
     {
-      id: 15,
+      id: 16,
       title: "Agente de Endemias",
       category: "Saúde",
       image: agenteendemias,
       duration: "2 meses",
       students: "220",
-      modules: "6",
-      price: "797,00",
-      installments: "8x de R$ 99,63"
-    },
+      modules: "6",   },
     {
-      id: 16,
+      id: 17,
       title: "Agente Portuario",
       category: "Negócios",
       image: agenteportuario,
       duration: "4 meses",
       students: "95",
       modules: "10",
-      price: "1.497,00",
-      installments: "12x de R$ 124,75"
     },
     {
-      id: 17,
+      id: 18,
       title: "Auxiliar de Necropsia",
       category: "Saúde",
       image: auxnecropsia,
       duration: "3 meses",
       students: "130",
-      modules: "8",
-      price: "1.197,00",
-      installments: "12x de R$ 99,75"
-    },
+      modules: "8",    },
     {
-      id: 18,
+      id: 19,
       title: "Auxiliar de RH",
       category: "Negócios",
       image: auxRH,
       duration: "5 meses",
       students: "75",
       modules: "15",
-      price: "1.597,00",
-      installments: "12x de R$ 133,08"
     },
     {
-      id: 19,
+      id: 20,
       title: "Auxiliar de Sala",
       category: "Negócios",
       image: auxSala,
       duration: "3 meses",
       students: "180",
-      modules: "9",
-      price: "997,00",
-      installments: "10x de R$ 99,70"
-    },
+      modules: "9",    },
     {
-      id: 20,
+      id: 21,
       title: "Auxiliar de Saúde Bucal",
       category: "Saúde",
       image: saudebucal,
       duration: "4 meses",
       students: "110",
       modules: "10",
-      price: "1.097,00",
-      installments: "10x de R$ 109,70"
     },
     {
-      id: 21,
+      id: 22,
       title: "Auxiliar de Seguranca do Trabalho",
       category: "Negócios",
       image: auxSegurancaTrabalho,
       duration: "3 meses",
       students: "90",
       modules: "8",
-      price: "1.297,00",
-      installments: "12x de R$ 108,08"
     },
     {
-      id: 22,
+      id: 23,
       title: "Auxiliar de Laboratorio",
       category: "Saúde",
       image: auxLaboratorio,
       duration: "4 meses",
       students: "85",
-      modules: "10",
-      price: "1.197,00",
-      installments: "12x de R$ 99,75"
-    },
+      modules: "10",    },
     {
-      id: 23,
+      id: 24,
       title: "Cuidador de Idosos",
       category: "Saúde",
       image: cuidadorIdosos,
       duration: "2 meses",
       students: "150",
-      modules: "6",
-      price: "897,00",
-      installments: "10x de R$ 89,70"
-    },
+      modules: "6",    },
     {
-      id: 24,
+      id: 25,
       title: "Defesa Civil",
       category: "Saúde",
       image: defesaCivil,
       duration: "6 meses",
       students: "70",
       modules: "15",
-      price: "1.697,00",
-      installments: "12x de R$ 141,42"
     },
     {
-      id: 25,
+      id: 26,
       title: "Fiscal do Meio Ambeiente",
       category: "Saúde",
       image: fiscalMeioAmbiente,
       duration: "2 meses",
       students: "120",
-      modules: "6",
-      price: "697,00",
-      installments: "6x de R$ 116,17"
-    },
+      modules: "6",    },
     {
-      id: 26,
+      id: 27,
       title: "Gestao Hospitalar",
       category: "Saúde",
       image: gestaoHospitalar,
       duration: "3 meses",
       students: "190",
-      modules: "8",
-      price: "997,00",
-      installments: "10x de R$ 99,70"
-    },
+      modules: "8",   
+     }
+      ,
     {
-      id: 27,
+      id: 28,
       title: "Guarda Municipal",
       category: "Saúde",
       image: guardamunicipal,
       duration: "5 meses",
       students: "65",
-      modules: "12",
-      price: "1.397,00",
-      installments: "12x de R$ 116,42"
+      modules: "12"
     },
   ];
 
   const handleLoadMore = () => {
     // Mostra todos os 28 cursos quando clicar no botão
-    setVisibleCourses(27);
+    setVisibleCourses(28);
   };
 
   // Função para navegar para a página de demonstração do curso
@@ -446,12 +388,6 @@ const CoursesPage = () => {
                     <span>{course.modules} módulos</span>
                   </div>
                 </CourseInfo>
-                <CoursePrice>
-                  <div>
-                    <div className="price">R$ {course.price}</div>
-                    <div className="installments">{course.installments}</div>
-                  </div>
-                </CoursePrice>
                 <CourseButton onClick={() => handleCourseClick(course.id)}>
                   Saiba Mais
                 </CourseButton>
