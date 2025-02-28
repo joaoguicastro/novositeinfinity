@@ -23,7 +23,7 @@ function App() {
           </>
         } />
         <Route path="/cursos" element={<CoursesPage />} />
-        <Route path="/curso/:id" element={<CoursePresentation id={''} />} />
+        <Route path="/curso/:id" element={<CoursePresentation />} />
       </Routes>
       <Footer />
     </Router>
