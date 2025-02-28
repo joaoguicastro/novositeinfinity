@@ -10,12 +10,13 @@ import {
   HeroImageContainer,
   Highlight
 } from '../styles/HeroStyles';
+import heroImage from '../../public/Logotipo-vertical-normal.png' 
 
 interface HeroProps {
   heroImage: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ heroImage }) => {
+const Hero: React.FC<HeroProps> = () => {
   return (
     <HeroContainer>
       <HeroContent>

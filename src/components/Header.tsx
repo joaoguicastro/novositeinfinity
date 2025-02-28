@@ -12,12 +12,13 @@ import {
   MobileMenu,
   MobileNavItem
 } from '../styles/HeaderStyles';
+import logo from '../../public/Logotipo-vertical-normal.png' 
 
 interface HeaderProps {
   logoSrc: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   const navItems = [
@@ -34,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
     <HeaderContainer>
       <HeaderContent>
         <Logo onClick={() => window.location.href = '/'}>
-          <img src={logoSrc} alt="Logo" />
+          <img src={logo} alt="Logo" />
         </Logo>
 
         <Nav>
