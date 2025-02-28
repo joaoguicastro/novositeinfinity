@@ -45,6 +45,35 @@ import {
   CallToAction
 } from '../styles/CoursePresentation';
 
+import informaticaprofissionalizante from '../assets/cursos/informaticaprof.jpg'
+import desenvolvedroFullStack from '../assets/cursos/desenvolvedorfullstack.jpg'
+import desenvolvimentoGames from '../assets/cursos/desenvolvedordegames.webp'
+import edicaoVideo from '../assets/cursos/edicaodevideo.jpg'
+import designerGrafico from '../assets/cursos/designgrafico.png'
+import marketingDigital from '../assets/cursos/marketingdigital.jpg'
+import empreendedorismo from '../assets/cursos/empreendedorismo.png'
+import auxadm from '../assets/cursos/auxadm.png'
+import atendenteFarmacia from '../assets/cursos/atendentefarmacia.jpg'
+import aph from '../assets/cursos/atendenteprehospitalar.png' 
+import heroimirim from '../assets/cursos/bombeiromirim.avif'
+import auxvet from '../assets/cursos/auxiliarvet.jpg' 
+import coletaSangue from '../assets/cursos/coletasangue.webp'
+import agentecomunitario from '../assets/cursos/agentecomunitario.jpg'
+import agenteendemias from '../assets/cursos/agenteendemias.jpg'
+import agenteportuario from '../assets/cursos/agenteportuario.jpg' 
+import auxnecropsia from '../assets/cursos/auxiliarnecropsia.jpg' 
+import auxRH from '../assets/cursos/auxiliarrh.jpg' 
+import auxSala from '../assets/cursos/auxiliarsala.jpg' 
+import saudebucal from '../assets/cursos/saudebucao.webp'
+import auxSegurancaTrabalho from '../assets/cursos/auxiliarseguranca.jpeg' 
+import auxLaboratorio from '../assets/cursos/auxiliardelaboratorio.jpg'
+import cuidadorIdosos from '../assets/cursos/cuidadordeidosos.png'
+import defesaCivil from '../assets/cursos/defesacivil.jpeg'
+import fiscalMeioAmbiente from '../assets/cursos/ficaldomeioambiente.png'
+import gestaoHospitalar from '../assets/cursos/gestaohospitalar.jpg' 
+import guardamunicipal from '../assets/cursos/guardamunicipal.jpg'
+import robotica from '../assets/cursos/robotica.jpeg'
+
 // Types
 interface Module {
   id: number;
@@ -112,7 +141,7 @@ const CoursePresentation: React.FC = () => {
       "duration": "6 meses",
       "lessons": 120,
       "level": "Básico a Intermediário",
-      "image": "/images/informatica-profissionalizante.jpg",
+      "image": informaticaprofissionalizante,
       "description": "Este curso oferece uma formação completa em informática, desde o básico até aplicações avançadas. Você aprenderá sobre sistemas operacionais, pacote Office, internet, segurança digital e introdução à programação.",
       "category": "Tecnologia",
       "modules": [
@@ -145,7 +174,7 @@ const CoursePresentation: React.FC = () => {
       "duration": "3 meses",
       "lessons": 80,
       "level": "Intermediário",
-      "image": "/images/desenvolvimento-fullstack.jpg",
+      "image": desenvolvedroFullStack,
       "description": "Este curso ensina as tecnologias essenciais para o desenvolvimento web Full-Stack, incluindo frontend e backend, além de práticas modernas como APIs e bancos de dados.",
       "category": "Tecnologia",
       "modules": [
@@ -176,7 +205,7 @@ const CoursePresentation: React.FC = () => {
       "duration": "4 meses",
       "lessons": 100,
       "level": "Intermediário",
-      "image": "/images/desenvolvimento-games.jpg",
+      "image": desenvolvimentoGames,
       "description": "Aprenda a criar jogos 2D e 3D utilizando ferramentas como Unity e Unreal Engine, além de conceitos fundamentais de programação para jogos.",
       "category": "Tecnologia",
       "modules": [
@@ -207,7 +236,7 @@ const CoursePresentation: React.FC = () => {
       "duration": "3 meses",
       "lessons": 75,
       "level": "Iniciante a Intermediário",
-      "image": "/images/edicao-video.jpg",
+      "image": edicaoVideo,
       "description": "Aprenda a editar vídeos utilizando softwares como Adobe Premiere e DaVinci Resolve, explorando técnicas de edição, transições e efeitos especiais.",
       "category": "Tecnologia",
       "modules": [
@@ -238,7 +267,7 @@ const CoursePresentation: React.FC = () => {
       "duration": "4 meses",
       "lessons": 90,
       "level": "Intermediário",
-      "image": "/images/design-grafico.jpg",
+      "image": designerGrafico,
       "description": "Desenvolva habilidades essenciais em design gráfico, utilizando ferramentas como Photoshop, Illustrator e CorelDRAW para criar materiais visuais impactantes.",
       "category": "Tecnologia",
       "modules": [
@@ -262,7 +291,913 @@ const CoursePresentation: React.FC = () => {
         }
       ]
     },
-    // Adicione mais cursos conforme necessário...
+    {
+      "id": 6,
+      "title": "Marketing Digital",
+      "subtitle": "Domine estratégias de marketing online",
+      "duration": "5 meses",
+      "lessons": 100,
+      "level": "Intermediário",
+      "image": marketingDigital,
+      "description": "Aprenda a criar e gerenciar campanhas de marketing digital, utilizando SEO, redes sociais, anúncios pagos e estratégias de engajamento para alavancar negócios no ambiente online.",
+      "category": "Tecnologia",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos do Marketing Digital",
+          "lessons": [
+            "Introdução ao Marketing Digital",
+            "Princípios de SEO e Marketing de Conteúdo",
+            "Planejamento de Campanhas Online"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Redes Sociais e Tráfego Pago",
+          "lessons": [
+            "Gestão de Redes Sociais",
+            "Anúncios no Google e Facebook Ads",
+            "Copywriting para Conversão"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Análise e Otimização",
+          "lessons": [
+            "Métricas e Ferramentas de Análise",
+            "Growth Hacking e Estratégias Avançadas",
+            "Automação de Marketing e CRM"
+          ]
+        }
+      ]
+    },{
+      "id": 7,
+      "title": "Robótica",
+      "subtitle": "Construa e programe robôs do zero",
+      "duration": "5 meses",
+      "lessons": 120,
+      "level": "Intermediário",
+      "image": robotica,
+      "description": "Explore o mundo da robótica, aprendendo desde a montagem de circuitos até a programação de microcontroladores como Arduino e ESP32. Desenvolva projetos práticos e adquira conhecimentos essenciais para a automação e inteligência artificial.",
+      "category": "Tecnologia",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Robótica",
+          "lessons": [
+            "Introdução à Robótica e Automação",
+            "Componentes Eletrônicos e Sensores",
+            "Primeiros Passos com Arduino"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Programação e Controle",
+          "lessons": [
+            "Lógica de Programação para Robôs",
+            "Uso de Motores e Servomecanismos",
+            "Projetos Práticos com Arduino e ESP32"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Inteligência e Automação",
+          "lessons": [
+            "Introdução à Inteligência Artificial para Robôs",
+            "Automação com Sensores e Internet das Coisas (IoT)",
+            "Desenvolvimento de Robôs Autônomos"
+          ]
+        }
+      ]
+    },{
+      "id": 8,
+      "title": "Empreendedorismo",
+      "subtitle": "Transforme ideias em negócios de sucesso",
+      "duration": "2 meses",
+      "lessons": 60,
+      "level": "Básico",
+      "image": empreendedorismo,
+      "description": "Desenvolva habilidades essenciais para empreender, aprendendo sobre planejamento, finanças, marketing e inovação. Crie seu próprio negócio e descubra como transformá-lo em um sucesso no mercado.",
+      "category": "Negócios",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos do Empreendedorismo",
+          "lessons": [
+            "O que é Empreendedorismo?",
+            "Perfil do Empreendedor de Sucesso",
+            "Identificação de Oportunidades de Negócio"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Planejamento e Finanças",
+          "lessons": [
+            "Modelos de Negócio e Canvas",
+            "Gestão Financeira para Pequenos Negócios",
+            "Fontes de Investimento e Capital"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Marketing e Vendas",
+          "lessons": [
+            "Estratégias de Marketing para Novos Negócios",
+            "Técnicas de Vendas e Negociação",
+            "Presença Digital e Posicionamento no Mercado"
+          ]
+        }
+      ]
+    },{
+      "id": 9,
+      "title": "Auxiliar Administrativo",
+      "subtitle": "Domine as rotinas administrativas e destaque-se no mercado",
+      "duration": "4 meses",
+      "lessons": 80,
+      "level": "Básico",
+      "image": auxadm,
+      "description": "Aprenda as principais funções administrativas, incluindo gestão de documentos, atendimento ao cliente, rotinas financeiras e operacionais, desenvolvendo habilidades essenciais para o ambiente corporativo.",
+      "category": "Negócios",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introdução à Administração",
+          "lessons": [
+            "Princípios da Administração",
+            "Organização e Planejamento Empresarial",
+            "Comunicação Empresarial"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Gestão e Processos Administrativos",
+          "lessons": [
+            "Rotinas Administrativas",
+            "Gestão de Documentos e Arquivamento",
+            "Atendimento ao Cliente e Relacionamento"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Administração Financeira e RH",
+          "lessons": [
+            "Noções de Gestão Financeira",
+            "Contas a Pagar e Receber",
+            "Introdução à Gestão de Pessoas"
+          ]
+        }
+      ]
+    },{
+      "id": 10,
+      "title": "Atendente de Farmácia",
+      "subtitle": "Aprenda a atuar no setor farmacêutico com excelência",
+      "duration": "3 meses",
+      "lessons": 70,
+      "level": "Básico",
+      "image": atendenteFarmacia,
+      "description": "Desenvolva habilidades essenciais para atuar como atendente de farmácia, aprendendo sobre medicamentos, atendimento ao cliente, normas sanitárias e gestão de produtos farmacêuticos.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introdução ao Setor Farmacêutico",
+          "lessons": [
+            "O Papel do Atendente de Farmácia",
+            "Ética e Legislação Farmacêutica",
+            "Tipos de Medicamentos e Classificações"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Atendimento e Gestão de Farmácia",
+          "lessons": [
+            "Boas Práticas no Atendimento ao Cliente",
+            "Receituário e Dispensação de Medicamentos",
+            "Controle de Estoque e Armazenamento"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Saúde e Bem-Estar",
+          "lessons": [
+            "Medicamentos Isentos de Prescrição (MIPs)",
+            "Noções de Primeiros Socorros",
+            "Suplementos e Produtos Naturais"
+          ]
+        }
+      ]
+    },{
+      "id": 11,
+      "title": "Atendimento Pré-Hospitalar",
+      "subtitle": "Capacite-se para atuar em emergências e salvar vidas",
+      "duration": "6 meses",
+      "lessons": 120,
+      "level": "Intermediário",
+      "image": aph,
+      "description": "Desenvolva habilidades essenciais para o atendimento de urgência e emergência, aprendendo protocolos de primeiros socorros, imobilizações, suporte básico de vida e manejo de vítimas em diversas situações.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos do Atendimento Pré-Hospitalar",
+          "lessons": [
+            "O que é o Atendimento Pré-Hospitalar?",
+            "Biossegurança e Equipamentos de Proteção Individual (EPI)",
+            "Avaliação Inicial e Protocolo de Atendimento"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Suporte Básico de Vida",
+          "lessons": [
+            "RCP (Reanimação Cardiopulmonar)",
+            "Desfibrilador Externo Automático (DEA)",
+            "Obstrução das Vias Aéreas e Manobras de Desobstrução"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Imobilizações e Transporte de Vítimas",
+          "lessons": [
+            "Imobilização de Fraturas e Lesões na Coluna",
+            "Uso de Maca e Pranchas Rígidas",
+            "Técnicas de Transporte e Remoção de Pacientes"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Atendimentos Específicos",
+          "lessons": [
+            "Atendimento a Vítimas de Trauma",
+            "Emergências Clínicas e Convulsões",
+            "Atendimento a Acidentes com Produtos Químicos"
+          ]
+        }
+      ]
+    },{
+      "id": 12,
+      "title": "Herói Mirim",
+      "subtitle": "Ensine às crianças os primeiros passos em segurança e primeiros socorros",
+      "duration": "5 meses",
+      "lessons": 80,
+      "level": "Básico",
+      "image": heroimirim,
+      "description": "Capacite crianças para lidarem com emergências de forma segura e responsável. O curso ensina noções básicas de primeiros socorros, segurança no dia a dia e como agir em situações de risco.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Noções Básicas de Segurança",
+          "lessons": [
+            "O que é um Herói Mirim?",
+            "Identificando Perigos no Dia a Dia",
+            "Como Pedir Ajuda em Emergências"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Primeiros Socorros para Crianças",
+          "lessons": [
+            "Cuidados com Pequenos Ferimentos",
+            "O que Fazer em Caso de Queda",
+            "Como Lidar com Engasgos e Queimaduras"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Segurança em Casa e na Escola",
+          "lessons": [
+            "Prevenção de Acidentes Domésticos",
+            "Cuidado com Produtos Perigosos",
+            "Evacuação Segura em Caso de Incêndio"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Comportamento Cidadão",
+          "lessons": [
+            "Importância do Trabalho em Equipe",
+            "Como Ajudar de Forma Segura",
+            "Respeito e Responsabilidade na Comunidade"
+          ]
+        }
+      ]
+    },{
+      "id": 13,
+      "title": "Auxiliar Veterinário",
+      "subtitle": "Aprenda a cuidar e auxiliar no tratamento de animais",
+      "duration": "3 meses",
+      "lessons": 75,
+      "level": "Básico",
+      "image": auxvet,
+      "description": "Capacite-se para atuar no suporte a veterinários, aprendendo sobre cuidados básicos, primeiros socorros, manejo de animais e administração de medicamentos. Torne-se um profissional essencial na área da saúde animal.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Medicina Veterinária",
+          "lessons": [
+            "O Papel do Auxiliar Veterinário",
+            "Noções de Anatomia e Fisiologia Animal",
+            "Bem-estar e Comportamento Animal"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Cuidados e Manejo de Animais",
+          "lessons": [
+            "Alimentação e Hidratação",
+            "Higiene e Cuidados Diários",
+            "Transporte Seguro de Animais"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Primeiros Socorros e Atendimento Clínico",
+          "lessons": [
+            "Atendimento de Emergência para Animais",
+            "Curativos e Tratamentos Básicos",
+            "Administração de Medicamentos"
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Ambiente Veterinário e Ética Profissional",
+          "lessons": [
+            "Organização e Higienização de Clínicas",
+            "Atendimento ao Cliente e Tutores",
+            "Ética e Legislação na Medicina Veterinária"
+          ]
+        }
+      ]
+    },{
+      "id": 14,
+      "title": "Coleta de Sangue",
+      "subtitle": "Aprenda as técnicas essenciais para coleta de sangue com segurança",
+      "duration": "3 meses",
+      "lessons": 80,
+      "level": "Intermediário",
+      "image": coletaSangue,
+      "description": "Capacite-se para atuar na área de análises clínicas, aprendendo técnicas de punção venosa, biossegurança, manuseio de amostras e atendimento humanizado ao paciente.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Coleta de Sangue",
+          "lessons": [
+            "Introdução à Hematologia",
+            "Tipos de Exames Laboratoriais",
+            "Biossegurança e Normas Sanitárias"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Técnicas de Punção Venosa",
+          "lessons": [
+            "Materiais e Equipamentos Utilizados",
+            "Técnicas de Coleta em Adultos e Crianças",
+            "Identificação e Manipulação de Amostras"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Atendimento e Procedimentos Especiais",
+          "lessons": [
+            "Atendimento Humanizado ao Paciente",
+            "Coleta para Hemocultura e Testes Especiais",
+            "Armazenamento e Transporte de Amostras"
+          ]
+        }
+      ]
+    },{
+      "id": 15,
+      "title": "Agente Comunitário de Saúde",
+      "subtitle": "Capacite-se para atuar na promoção da saúde na comunidade",
+      "duration": "4 meses",
+      "lessons": 90,
+      "level": "Básico",
+      "image": agentecomunitario,
+      "description": "Aprenda a atuar como Agente Comunitário de Saúde, promovendo educação em saúde, prevenção de doenças e assistência à população. Desenvolva habilidades essenciais para trabalhar junto à comunidade e equipes de saúde.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos do Trabalho Comunitário",
+          "lessons": [
+            "O Papel do Agente Comunitário de Saúde",
+            "Sistema Único de Saúde (SUS) e Políticas Públicas",
+            "Ética e Humanização no Atendimento"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Promoção da Saúde e Prevenção de Doenças",
+          "lessons": [
+            "Educação em Saúde e Orientação Comunitária",
+            "Imunização e Prevenção de Doenças",
+            "Acompanhamento de Grupos de Risco"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Atendimento Domiciliar e Acompanhamento",
+          "lessons": [
+            "Visitas Domiciliares e Registro de Informações",
+            "Monitoramento de Saúde e Primeiros Socorros",
+            "Encaminhamento e Integração com a Rede de Saúde"
+          ]
+        }
+      ]
+    },{
+      "id": 16,
+      "title": "Agente de Endemias",
+      "subtitle": "Capacite-se para combater e prevenir doenças endêmicas",
+      "duration": "2 meses",
+      "lessons": 60,
+      "level": "Básico",
+      "image": agenteendemias,
+      "description": "Aprenda a atuar na prevenção e controle de doenças endêmicas, desenvolvendo habilidades para identificar focos de transmissão, orientar a população e aplicar medidas de controle sanitário.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos do Controle de Endemias",
+          "lessons": [
+            "O Papel do Agente de Endemias",
+            "Principais Doenças Endêmicas no Brasil",
+            "Legislação e Políticas Públicas de Saúde"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Monitoramento e Controle de Vetores",
+          "lessons": [
+            "Identificação e Eliminação de Focos de Mosquitos",
+            "Uso de Equipamentos e Técnicas de Pulverização",
+            "Prevenção de Zoonoses e Controle de Roedores"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Educação e Conscientização da População",
+          "lessons": [
+            "Estratégias de Educação em Saúde",
+            "Ações Comunitárias e Campanhas de Prevenção",
+            "Integração com Equipes de Saúde e Vigilância Epidemiológica"
+          ]
+        }
+      ]
+    },{
+      "id": 17,
+      "title": "Agente Portuário",
+      "subtitle": "Capacite-se para atuar na operação e logística portuária",
+      "duration": "4 meses",
+      "lessons": 80,
+      "level": "Básico",
+      "image": agenteportuario,
+      "description": "Aprenda os fundamentos da logística portuária, gestão de cargas, segurança e regulamentação para atuar como agente portuário, garantindo eficiência e segurança nas operações marítimas.",
+      "category": "Negócios",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introdução ao Setor Portuário",
+          "lessons": [
+            "O Papel do Agente Portuário",
+            "Funcionamento dos Portos e Terminais",
+            "Infraestrutura e Modalidades de Transporte"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Operações e Logística Portuária",
+          "lessons": [
+            "Gestão de Cargas e Movimentação de Mercadorias",
+            "Segurança e Normas Ambientais nos Portos",
+            "Documentação e Processos Aduaneiros"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Regulamentação e Segurança",
+          "lessons": [
+            "Legislação e Normas do Transporte Marítimo",
+            "Prevenção de Acidentes e Emergências",
+            "Tecnologias Aplicadas à Gestão Portuária"
+          ]
+        }
+      ]
+    },{
+      "id": 18,
+      "title": "Auxiliar de Necropsia",
+      "subtitle": "Capacite-se para atuar na área de tanatopraxia e perícia forense",
+      "duration": "3 meses",
+      "lessons": 70,
+      "level": "Intermediário",
+      "image": auxnecropsia,
+      "description": "Aprenda as técnicas de manipulação e preparação de corpos, identificação de causas mortis e normas de biossegurança para atuar como auxiliar de necropsia em institutos médico-legais e funerárias.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Necropsia",
+          "lessons": [
+            "Introdução à Tanatologia",
+            "Normas e Regulamentações Legais",
+            "Segurança e Higienização no Ambiente de Trabalho"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Procedimentos Técnicos",
+          "lessons": [
+            "Manipulação e Preparação do Corpo",
+            "Técnicas de Conservação e Tanatopraxia",
+            "Reconstituição e Reconhecimento de Corpos"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Auxílio em Perícias",
+          "lessons": [
+            "Identificação de Causas Mortis",
+            "Atuação em Institutos Médico-Legais",
+            "Noções de Medicina Legal e Criminalística"
+          ]
+        }
+      ]
+    },{
+      "id": 19,
+      "title": "Auxiliar de RH",
+      "subtitle": "Desenvolva habilidades essenciais para gestão de pessoas",
+      "duration": "5 meses",
+      "lessons": 90,
+      "level": "Básico",
+      "image": auxRH,
+      "description": "Aprenda a atuar no setor de Recursos Humanos, desenvolvendo habilidades em recrutamento, folha de pagamento, benefícios, legislação trabalhista e desenvolvimento organizacional.",
+      "category": "Negócios",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos de RH",
+          "lessons": [
+            "Introdução à Gestão de Pessoas",
+            "Atribuições do Auxiliar de RH",
+            "Ética e Comportamento Profissional"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Processos Administrativos",
+          "lessons": [
+            "Recrutamento e Seleção de Talentos",
+            "Folha de Pagamento e Benefícios",
+            "Legislação Trabalhista e Normas CLT"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Desenvolvimento Organizacional",
+          "lessons": [
+            "Gestão de Desempenho e Clima Organizacional",
+            "Treinamento e Desenvolvimento de Equipes",
+            "Técnicas de Motivação e Liderança"
+          ]
+        }
+      ]
+    },{
+      "id": 20,
+      "title": "Auxiliar de Sala",
+      "subtitle": "Aprenda a apoiar professores e alunos no ambiente escolar",
+      "duration": "3 meses",
+      "lessons": 75,
+      "level": "Básico",
+      "image": auxSala,
+      "description": "Capacite-se para atuar no suporte a professores e alunos, auxiliando na organização da sala de aula, desenvolvimento das atividades pedagógicas e inclusão educacional.",
+      "category": "Negócios",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Educação",
+          "lessons": [
+            "O Papel do Auxiliar de Sala",
+            "Ética e Responsabilidade na Educação",
+            "Inclusão Escolar e Atendimento a Necessidades Especiais"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Organização e Suporte Pedagógico",
+          "lessons": [
+            "Apoio ao Professor e Planejamento de Aulas",
+            "Técnicas de Mediação Escolar",
+            "Ambiente Escolar e Disciplina Positiva"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Desenvolvimento Infantil e Aprendizagem",
+          "lessons": [
+            "Psicologia da Aprendizagem",
+            "Estimulação Cognitiva e Criatividade",
+            "Atividades Lúdicas e Recreação"
+          ]
+        }
+      ]
+    },{
+      "id": 21,
+      "title": "Auxiliar de Saúde Bucal",
+      "subtitle": "Capacite-se para atuar no suporte a dentistas e na prevenção odontológica",
+      "duration": "4 meses",
+      "lessons": 80,
+      "level": "Básico",
+      "image": saudebucal,
+      "description": "Aprenda as técnicas de assistência odontológica, prevenção de doenças bucais, organização de materiais e atendimento a pacientes, tornando-se um profissional essencial na saúde bucal.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Odontologia",
+          "lessons": [
+            "O Papel do Auxiliar de Saúde Bucal",
+            "Ética e Legislação Odontológica",
+            "Noções de Anatomia e Fisiologia Bucal"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Assistência e Prevenção Odontológica",
+          "lessons": [
+            "Instrumentação e Técnicas de Atendimento",
+            "Prevenção de Cáries e Doenças Bucais",
+            "Cuidados com Higiene Oral e Profilaxia"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Gestão e Atendimento ao Paciente",
+          "lessons": [
+            "Organização do Consultório e Materiais",
+            "Atendimento Humanizado ao Paciente",
+            "Biossegurança e Controle de Infecção"
+          ]
+        }
+      ]
+    },{
+      "id": 22,
+      "title": "Auxiliar de Segurança do Trabalho",
+      "subtitle": "Aprenda a promover um ambiente de trabalho seguro",
+      "duration": "3 meses",
+      "lessons": 75,
+      "level": "Básico",
+      "image": auxSegurancaTrabalho,
+      "description": "Capacite-se para atuar na prevenção de riscos ocupacionais, identificando perigos, aplicando normas de segurança e contribuindo para a saúde e bem-estar dos trabalhadores.",
+      "category": "Negócios",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Segurança do Trabalho",
+          "lessons": [
+            "Introdução à Segurança do Trabalho",
+            "Normas Regulamentadoras (NRs)",
+            "Identificação de Riscos Ocupacionais"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Prevenção e Controle de Acidentes",
+          "lessons": [
+            "Equipamentos de Proteção Individual (EPI)",
+            "Treinamento e Conscientização dos Trabalhadores",
+            "Procedimentos em Caso de Emergência"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Saúde Ocupacional e Ergonomia",
+          "lessons": [
+            "Gestão de Saúde no Trabalho",
+            "Noções de Ergonomia e Postura",
+            "Prevenção de Doenças Ocupacionais"
+          ]
+        }
+      ]
+    },{
+      "id": 23,
+      "title": "Auxiliar de Laboratório",
+      "subtitle": "Aprenda a atuar no suporte a exames laboratoriais",
+      "duration": "4 meses",
+      "lessons": 90,
+      "level": "Intermediário",
+      "image": auxLaboratorio,
+      "description": "Capacite-se para auxiliar na realização de exames laboratoriais, aprendendo sobre manipulação de amostras, biossegurança e técnicas laboratoriais.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Análise Laboratorial",
+          "lessons": [
+            "Introdução à Análises Clínicas",
+            "Biossegurança e Equipamentos de Proteção",
+            "Coleta e Manipulação de Amostras"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Técnicas Laboratoriais",
+          "lessons": [
+            "Processamento de Amostras",
+            "Interpretação de Resultados",
+            "Manutenção e Higienização de Equipamentos"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Gestão e Atendimento no Laboratório",
+          "lessons": [
+            "Organização e Rotinas Laboratoriais",
+            "Atendimento ao Paciente e Coleta Humanizada",
+            "Armazenamento e Transporte de Amostras"
+          ]
+        }
+      ]
+    },{
+      "id": 24,
+      "title": "Cuidador de Idosos",
+      "subtitle": "Capacite-se para oferecer cuidado e qualidade de vida a idosos",
+      "duration": "2 meses",
+      "lessons": 60,
+      "level": "Básico",
+      "image": cuidadorIdosos,
+      "description": "Aprenda técnicas essenciais para o cuidado de idosos, incluindo administração de medicamentos, mobilidade, higiene e atendimento humanizado.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos do Cuidado ao Idoso",
+          "lessons": [
+            "O Papel do Cuidador de Idosos",
+            "Envelhecimento e Qualidade de Vida",
+            "Ética e Respeito na Assistência"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Saúde e Mobilidade",
+          "lessons": [
+            "Higiene e Cuidados Diários",
+            "Prevenção de Quedas e Mobilidade",
+            "Administração de Medicamentos"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Aspectos Psicológicos e Sociais",
+          "lessons": [
+            "Saúde Mental e Emoções na Terceira Idade",
+            "Comunicação com Idosos e Familiares",
+            "Atividades e Estímulos Cognitivos"
+          ]
+        }
+      ]
+    },{
+      "id": 25,
+      "title": "Defesa Civil",
+      "subtitle": "Prepare-se para atuar na gestão de desastres e emergências",
+      "duration": "6 meses",
+      "lessons": 120,
+      "level": "Intermediário",
+      "image": defesaCivil,
+      "description": "Aprenda a atuar na prevenção e resposta a desastres naturais e emergências, desenvolvendo habilidades para planejar ações de segurança e resgate.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introdução à Defesa Civil",
+          "lessons": [
+            "O que é Defesa Civil?",
+            "Planejamento e Gestão de Riscos",
+            "Normas e Regulamentações de Segurança"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Ações de Prevenção e Resgate",
+          "lessons": [
+            "Técnicas de Salvamento e Resgate",
+            "Primeiros Socorros e Atendimento Emergencial",
+            "Atuação em Desastres Naturais"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Gestão de Crises e Recuperação",
+          "lessons": [
+            "Monitoramento de Áreas de Risco",
+            "Apoio às Vítimas e Reabilitação Pós-Desastre",
+            "Comunicação e Coordenação de Equipes"
+          ]
+        }
+      ]
+    },{
+      "id": 26,
+      "title": "Fiscal do Meio Ambiente",
+      "subtitle": "Aprenda a fiscalizar e proteger o meio ambiente",
+      "duration": "2 meses",
+      "lessons": 60,
+      "level": "Básico",
+      "image": fiscalMeioAmbiente,
+      "description": "Capacite-se para atuar na fiscalização ambiental, identificando crimes ambientais e promovendo a sustentabilidade e preservação do meio ambiente.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Fiscalização Ambiental",
+          "lessons": [
+            "O Papel do Fiscal Ambiental",
+            "Legislação Ambiental Brasileira",
+            "Identificação de Impactos Ambientais"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Técnicas de Fiscalização",
+          "lessons": [
+            "Monitoramento de Áreas de Preservação",
+            "Prevenção e Controle de Poluição",
+            "Educação e Conscientização Ambiental"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Gestão e Sustentabilidade",
+          "lessons": [
+            "Licenciamento e Regularização Ambiental",
+            "Planejamento de Ações Sustentáveis",
+            "Cooperação com Órgãos Ambientais"
+          ]
+        }
+      ]
+    },{
+      "id": 27,
+      "title": "Gestão Hospitalar",
+      "subtitle": "Aprenda a administrar unidades de saúde com eficiência",
+      "duration": "3 meses",
+      "lessons": 80,
+      "level": "Intermediário",
+      "image": gestaoHospitalar,
+      "description": "Desenvolva habilidades para gerenciar hospitais, clínicas e unidades de saúde, abordando planejamento estratégico, gestão financeira e qualidade no atendimento.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentos da Gestão Hospitalar",
+          "lessons": [
+            "Introdução à Administração Hospitalar",
+            "Legislação e Políticas de Saúde",
+            "Ética e Humanização no Atendimento"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Gestão de Recursos e Serviços",
+          "lessons": [
+            "Planejamento e Logística Hospitalar",
+            "Gestão Financeira e Custos na Saúde",
+            "Controle de Qualidade e Segurança do Paciente"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Tecnologia e Inovação na Saúde",
+          "lessons": [
+            "Prontuário Eletrônico e Informatização",
+            "Novas Tecnologias em Saúde",
+            "Sustentabilidade na Gestão Hospitalar"
+          ]
+        }
+      ]
+    },{
+      "id": 28,
+      "title": "Guarda Municipal",
+      "subtitle": "Prepare-se para atuar na segurança pública municipal",
+      "duration": "5 meses",
+      "lessons": 100,
+      "level": "Intermediário",
+      "image": guardamunicipal,
+      "description": "Capacite-se para atuar como Guarda Municipal, desenvolvendo habilidades em segurança pública, defesa pessoal, legislação e atendimento comunitário.",
+      "category": "Saúde",
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introdução à Segurança Pública",
+          "lessons": [
+            "Função e Responsabilidades da Guarda Municipal",
+            "Legislação e Direitos Humanos",
+            "Técnicas de Abordagem e Condução"
+          ]
+        }
+      ]
+    },                                                                                            
   ];
 
   // Simulação de instrutores para cada curso

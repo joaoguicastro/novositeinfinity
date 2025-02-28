@@ -14,7 +14,6 @@ import {
   CourseContent,
   CourseTitle,
   CourseInfo,
-  CoursePrice,
   CourseButton
 } from '../styles/CoursesStyles';
 
@@ -26,43 +25,39 @@ interface Course {
   duration: string;
   students: number;
   rating: number;
-  price: number;
   installments: number;
 }
 
 const FeaturedCourses: React.FC = () => {
   const courses: Course[] = [
     {
-      id: 1,
-      title: "Desenvolvimento Web Full Stack",
+      id: 2,
+      title: "Desenvolvimento Full Stack",
       category: "Tecnologia",
       image: desenvolvedroFullStack,
       duration: "6 meses",
       students: 1500,
       rating: 4.8,
-      price: 1997,
       installments: 12
     },
     {
-      id: 2,
+      id: 6,
       title: "Marketing Digital",
       category: "Tecnologia",
       image: marketingDigital,
       duration: "4 meses",
       students: 1200,
       rating: 4.7,
-      price: 1497,
       installments: 12
     },
     {
-      id: 3,
+      id: 8,
       title: "Empreendedorismo",
       category: "Negócios",
       image: empreendedorismo,
       duration: "3 meses",
       students: 980,
       rating: 4.9,
-      price: 1297,
       installments: 12
     }
   ];
@@ -99,16 +94,6 @@ const FeaturedCourses: React.FC = () => {
                   <span>{course.rating}</span>
                 </div>
               </CourseInfo>
-
-              <CoursePrice>
-                <div>
-                  <div className="price">R$ {course.price.toLocaleString()}</div>
-                  <div className="installments">
-                    ou {course.installments}x de R$ {(course.price / course.installments).toFixed(2)}
-                  </div>
-                </div>
-              </CoursePrice>
-
               <CourseButton onClick={() => window.location.href = `/curso/${course.id}`}>
                 Saiba Mais
               </CourseButton>
