@@ -4,7 +4,11 @@ export const FooterSection = styled.footer`
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
-  padding: 4rem 2rem 2rem;
+  padding: 3rem 1rem 1.5rem;
+  
+  @media (min-width: 768px) {
+    padding: 4rem 2rem 2rem;
+  }
 
   &::before {
     content: '';
@@ -19,33 +23,45 @@ export const FooterSection = styled.footer`
 `;
 
 export const FooterContainer = styled.div`
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
-
-  @media (max-width: 968px) {
+  
+  @media (min-width: 481px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
+  
+  @media (min-width: 969px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 `;
 
 export const FooterColumn = styled.div`
   h3 {
     color: #000000;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
   p {
     color: #666;
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
+    
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -54,14 +70,22 @@ export const FooterLinks = styled.ul`
   padding: 0;
 
   li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 0.75rem;
+    }
   }
 
   a {
     color: #666;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
 
     &:hover {
       color: #73b809;
@@ -74,23 +98,44 @@ export const ContactInfo = styled.div`
   div {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
     color: #666;
+    font-size: 0.95rem;
+    
+    @media (min-width: 768px) {
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
 
     svg {
       color: #73b809;
+      min-width: 18px;
+      
+      @media (min-width: 768px) {
+        min-width: 20px;
+      }
     }
   }
 `;
 
 export const SocialLinks = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
+  
+  @media (min-width: 768px) {
+    gap: 1rem;
+  }
 
   a {
     color: #666;
     transition: all 0.3s ease;
+    font-size: 1.25rem;
+    
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
 
     &:hover {
       color: #73b809;
@@ -100,10 +145,16 @@ export const SocialLinks = styled.div`
 `;
 
 export const FooterBottom = styled.div`
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(115, 184, 9, 0.1);
   text-align: center;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  
+  @media (min-width: 768px) {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+  }
 `;

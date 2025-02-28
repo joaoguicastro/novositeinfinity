@@ -14,7 +14,8 @@ import {
   CourseContent,
   CourseTitle,
   CourseInfo,
-  CourseButton
+  CourseButton,
+  ViewAllButton
 } from '../styles/CoursesStyles';
 
 interface Course {
@@ -101,6 +102,10 @@ const FeaturedCourses: React.FC = () => {
           </CourseCard>
         ))}
       </CoursesGrid>
+      
+      <ViewAllButton onClick={() => window.location.href = '/cursos'}>
+        Ver Todos os Cursos
+      </ViewAllButton>
     </CoursesSection>
   );
 };

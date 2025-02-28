@@ -142,7 +142,7 @@ const CoursePresentation: React.FC = () => {
       "lessons": 120,
       "level": "Básico a Intermediário",
       "image": informaticaprofissionalizante,
-      "description": "Este curso oferece uma formação completa em informática, desde o básico até aplicações avançadas. Você aprenderá sobre sistemas operacionais, pacote Office, internet, segurança digital e introdução à programação.",
+      "description": "Este curso oferece uma formação completa em informática, desde o básico até aplicações avançadas. Você aprenderá sobre sistemas operacionais, pacote Office, internet, segurança digital e introdução à Designer Grafico.",
       "category": "Tecnologia",
       "modules": [
         {
@@ -162,7 +162,7 @@ const CoursePresentation: React.FC = () => {
             "Edição de Texto e Planilhas",
             "Criação de Apresentações Profissionais",
             "Banco de Dados Básico",
-            "Introdução à Programação"
+            "Introdução à Designer Grafico"
           ]
         }
       ]

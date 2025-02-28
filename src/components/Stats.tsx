@@ -25,7 +25,7 @@ const Stats: React.FC = () => {
     },
     {
       icon: <BookOpen size={40} />,
-      number: "50+",
+      number: "100+",
       text: "Cursos Disponíveis"
     },
     {
@@ -39,7 +39,7 @@ const Stats: React.FC = () => {
     {
       icon: <Clock size={32} />,
       title: "Flexibilidade de Horários",
-      description: "Estude no seu próprio ritmo com aulas gravadas e ao vivo, adaptando os estudos à sua rotina."
+      description: "Escolha a melhor forma de estudar! Oferecemos aulas presenciais em diversos horários e também aulas gravadas para que você aprenda no seu próprio ritmo."
     },
     {
       icon: <Star size={32} />,

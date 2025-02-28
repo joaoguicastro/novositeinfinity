@@ -14,6 +14,9 @@ import {
   NavButton,
   TestimonialsSlider
 } from '../styles/TestimonialsStyles';
+import mariasilva from '../../public/mariasilva.avif' 
+import joaosantos from '../../public/homem-de-camisa-verde-com-os-bracos-cruzados_23-2148401380.avif'
+import foto from '../../public/pessoa-de-origem-indiana-se-divertindo_23-2150285283.avif'
 
 interface Testimonial {
   id: number;
@@ -31,7 +34,7 @@ const Testimonials: React.FC = () => {
       content: "O curso superou todas as minhas expectativas. A metodologia prática e o suporte dos professores foram fundamentais para minha evolução profissional. Hoje atuo na área e devo muito à formação que recebi.",
       author: "Maria Silva",
       position: "Desenvolvedora Web",
-      image: "/path/to/maria-image.jpg",
+      image: mariasilva,
       course: "Desenvolvimento Web Full Stack"
     },
     {
@@ -39,7 +42,7 @@ const Testimonials: React.FC = () => {
       content: "Escolher este curso foi a melhor decisão que tomei para minha carreira. O conteúdo é atualizado e os professores têm muita experiência prática. Consegui minha primeira oportunidade na área logo após a conclusão.",
       author: "João Santos",
       position: "Analista de Marketing Digital",
-      image: "/path/to/joao-image.jpg",
+      image: joaosantos,
       course: "Marketing Digital"
     },
     {
@@ -47,7 +50,7 @@ const Testimonials: React.FC = () => {
       content: "A qualidade do ensino é excepcional. Os projetos práticos me deram confiança para atuar no mercado. O networking com outros alunos também foi muito valioso para minha carreira.",
       author: "Ana Oliveira",
       position: "Gestora de Projetos",
-      image: "/path/to/ana-image.jpg",
+      image: foto,
       course: "Gestão de Projetos"
     }
   ];

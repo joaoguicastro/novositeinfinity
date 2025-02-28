@@ -79,7 +79,6 @@ export const MobileMenuButton = styled.button`
 `;
 
 export const MobileMenu = styled.div<{ isOpen: boolean }>`
-  display: none;
   position: fixed;
   top: 80px;
   left: 0;
@@ -87,9 +86,13 @@ export const MobileMenu = styled.div<{ isOpen: boolean }>`
   background-color: #f2f2f2;
   padding: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: ${props => (props.isOpen ? 'translateY(0)' : 'translateY(-100%)')};
+  opacity: ${props => (props.isOpen ? '1' : '0')};
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  pointer-events: ${props => (props.isOpen ? 'auto' : 'none')};
 
   @media (max-width: 768px) {
-    display: ${props => props.isOpen ? 'block' : 'none'};
+    display: block;
   }
 `;
 

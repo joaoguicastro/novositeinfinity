@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ heroImage }) => {
             <PrimaryButton onClick={() => window.location.href = '/cursos'}>
               Comece Agora
             </PrimaryButton>
-            <SecondaryButton onClick={() => window.location.href = '/consultor'}>
+            <SecondaryButton onClick={() => window.location.href = `https://wa.me/5585991154215?text=${encodeURIComponent("Oi, Gostaria de mais informações sobre os cursos")}`}>
               Falar com Consultor
             </SecondaryButton>
           </CTAButtons>

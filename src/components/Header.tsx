@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Logo>
+        <Logo onClick={() => window.location.href = '/'}>
           <img src={logoSrc} alt="Logo" />
         </Logo>
 
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
               {item.text}
             </NavItem>
           ))}
-          <ContactButton onClick={() => window.location.href = '/contato'}>
+          <ContactButton onClick={() => window.location.href = `https://wa.me/5585991154215?text=${encodeURIComponent("Oi, Gostaria de mais informações sobre os cursos")}`}>
             Fale Conosco
           </ContactButton>
         </Nav>
@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
             {item.text}
           </MobileNavItem>
         ))}
-        <MobileNavItem as="button" onClick={() => window.location.href = '/contato'}>
+        <MobileNavItem as="button" onClick={() => window.location.href = `https://wa.me/5585991154215?text=${encodeURIComponent("Oi, Gostaria de mais informações sobre os cursos")}`}>
           Fale Conosco
         </MobileNavItem>
       </MobileMenu>
