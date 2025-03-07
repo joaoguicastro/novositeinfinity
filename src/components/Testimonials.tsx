@@ -56,6 +56,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
+    <div id='historias'>
     <TestimonialsSection>
       <TestimonialsContainer>
         <TestimonialsHeader>
@@ -92,7 +93,8 @@ const Testimonials: React.FC = () => {
           </NavButton>
         </NavigationButtons>
       </TestimonialsContainer>
-    </TestimonialsSection>
+    </TestimonialsSection>'
+    </div>
   );
 };
 

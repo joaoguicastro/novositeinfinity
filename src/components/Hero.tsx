@@ -18,6 +18,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = () => {
   return (
+    <div id='inicio'>
     <HeroContainer>
       <HeroContent>
         <HeroText>
@@ -51,6 +52,7 @@ const Hero: React.FC<HeroProps> = () => {
         </HeroImageContainer>
       </HeroContent>
     </HeroContainer>
+    </div>
   );
 };
 

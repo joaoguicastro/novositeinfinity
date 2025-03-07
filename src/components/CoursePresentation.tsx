@@ -138,7 +138,7 @@ const CoursePresentation: React.FC = () => {
       "id": 1,
       "title": "Informática Profissionalizante",
       "subtitle": "Domine a informática e amplie suas oportunidades",
-      "duration": "6 meses",
+      "duration": "9 meses",
       "lessons": 120,
       "level": "Básico a Intermediário",
       "image": informaticaprofissionalizante,
@@ -171,7 +171,7 @@ const CoursePresentation: React.FC = () => {
       "id": 2,
       "title": "Desenvolvimento Full-Stack",
       "subtitle": "Aprenda a desenvolver aplicações completas",
-      "duration": "3 meses",
+      "duration": "9 meses",
       "lessons": 80,
       "level": "Intermediário",
       "image": desenvolvedroFullStack,
@@ -202,7 +202,7 @@ const CoursePresentation: React.FC = () => {
       "id": 3,
       "title": "Desenvolvimento de Games",
       "subtitle": "Crie seus próprios jogos do zero",
-      "duration": "4 meses",
+      "duration": "9 meses",
       "lessons": 100,
       "level": "Intermediário",
       "image": desenvolvimentoGames,
@@ -1256,7 +1256,7 @@ const CoursePresentation: React.FC = () => {
     },
     {
       id: 3,
-      question: "O certificado é reconhecido pelo mercado?",
+      question: "O certificado é reconhecido em todo territorio nacional?",
       answer: "Sim! Nosso certificado é reconhecido pelas principais empresas e pode ser incluído no seu currículo e perfil do LinkedIn."
     }
   ];

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import {
   FooterSection,
   FooterContainer,
@@ -25,11 +25,10 @@ const Footer = () => {
         <FooterColumn>
           <h3>Links Rápidos</h3>
           <FooterLinks>
-            <li><a href="#">Nossos Cursos</a></li>
-            <li><a href="#">Histórias de Sucesso</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Área do Aluno</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="/cursos">Nossos Cursos</a></li>
+            <li><a href="#historias">Histórias de Sucesso</a></li>
+            <li><a href="https://infinity.curso.study/metodo/login.php">Área do Aluno</a></li>
+            <li><a href="">Contato</a></li>
           </FooterLinks>
         </FooterColumn>
 
@@ -38,15 +37,15 @@ const Footer = () => {
           <ContactInfo>
             <div>
               <MapPin size={20} />
-              <span>Rua Example, 123 - Cidade</span>
+              <span>Rua Joao de Alencar, 113 - Maracanau</span>
             </div>
             <div>
               <Phone size={20} />
-              <span>(00) 1234-5678</span>
+              <span>(85) 9 9115-4215</span>
             </div>
             <div>
               <Mail size={20} />
-              <span>contato@exemplo.com</span>
+              <span>redeinfinitycursos@gmail.com</span>
             </div>
           </ContactInfo>
         </FooterColumn>
@@ -55,13 +54,10 @@ const Footer = () => {
           <h3>Redes Sociais</h3>
           <p>Siga-nos nas redes sociais e fique por dentro das novidades.</p>
           <SocialLinks>
-            <a href="#" aria-label="Facebook">
-              <Facebook size={24} />
-            </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/infinitycursosofc/" aria-label="Instagram">
               <Instagram size={24} />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a href="" aria-label="LinkedIn">
               <Linkedin size={24} />
             </a>
           </SocialLinks>

@@ -54,6 +54,7 @@ const Stats: React.FC = () => {
   ];
 
   return (
+    <div id="sobre">
     <StatsSection>
       <StatsContainer>
         <StatsHeader>
@@ -82,6 +83,7 @@ const Stats: React.FC = () => {
         </DifferentialsGrid>
       </StatsContainer>
     </StatsSection>
+    </div>
   );
 };
 

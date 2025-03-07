@@ -20,7 +20,7 @@ const floatingAnimation = keyframes`
 
 export const HeroContainer = styled.section`
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 0px;
   background: linear-gradient(135deg, #f2f2f2 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
