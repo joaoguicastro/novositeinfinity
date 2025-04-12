@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = () => {
     { text: 'Início', href: '#inicio' },
     { text: 'Cursos', href: '/cursos' },
     { text: 'Sobre', href: '#sobre' },
-    { text: 'Area do aluno', href: 'https://infinity.curso.study/metodo/login.php', external: true  },
+    { text: 'Area do aluno', href: 'https://www.sistemasqis.com.br/supercursos_areaaluno/', external: true  },
   ];
 
   const toggleMobileMenu = () => {
