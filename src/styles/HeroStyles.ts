@@ -34,10 +34,14 @@ export const HeroContainer = styled.section`
     bottom: 0;
     background: url('/path-to-subtle-pattern.png');
     opacity: 0.1;
+    z-index: 0; /* 🔧 Mantém no fundo para não bloquear os botões */
   }
 `;
 
 export const HeroContent = styled.div`
+  position: relative; /* 🔧 Necessário para z-index funcionar */
+  z-index: 1;
+
   max-width: 1200px;
   margin: 0 auto;
   padding: 6rem 2rem;

@@ -36,8 +36,8 @@ const FeaturedCourses: React.FC = () => {
       title: "Desenvolvimento Full Stack",
       category: "Tecnologia",
       image: desenvolvedroFullStack,
-      duration: "6 meses",
-      students: 1500,
+      duration: "8 meses",
+      students: 200,
       rating: 4.8,
       installments: 12
     },
@@ -46,8 +46,8 @@ const FeaturedCourses: React.FC = () => {
       title: "Marketing Digital",
       category: "Tecnologia",
       image: marketingDigital,
-      duration: "4 meses",
-      students: 1200,
+      duration: "8 meses",
+      students: 200,
       rating: 4.7,
       installments: 12
     },
@@ -56,8 +56,8 @@ const FeaturedCourses: React.FC = () => {
       title: "Empreendedorismo",
       category: "Negócios",
       image: empreendedorismo,
-      duration: "3 meses",
-      students: 980,
+      duration: "8 meses",
+      students: 200,
       rating: 4.9,
       installments: 12
     }

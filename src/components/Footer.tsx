@@ -1,4 +1,8 @@
 import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom'; // IMPORTANTE
+import { BotaoUnidades } from '../styles/FooterStyles';
+
+
 import {
   FooterSection,
   FooterContainer,
@@ -25,10 +29,10 @@ const Footer = () => {
         <FooterColumn>
           <h3>Links Rápidos</h3>
           <FooterLinks>
-            <li><a href="/cursos">Nossos Cursos</a></li>
-            <li><a href="#historias">Histórias de Sucesso</a></li>
-            <li><a href="https://infinity.curso.study/metodo/login.php">Área do Aluno</a></li>
-            <li><a href="">Contato</a></li>
+            <li><Link to="/cursos">Nossos Cursos</Link></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="https://www.sistemasqis.com.br/supercursos_areaaluno/" target="_blank" rel="noopener noreferrer">Área do Aluno</a></li>
+            <li><a href="https://wa.me/5585991154215">Contato</a></li>
           </FooterLinks>
         </FooterColumn>
 
@@ -37,7 +41,10 @@ const Footer = () => {
           <ContactInfo>
             <div>
               <MapPin size={20} />
-              <span>Rua Joao de Alencar, 113 - Maracanau</span>
+              <span>
+                Rua João de Alencar, 113, Centro - Maracanaú/CE - MATRIZ<br />
+                Rua Francisco Sales, 116, Centro - Caucaia/CE - FILIAL
+              </span>
             </div>
             <div>
               <Phone size={20} />
@@ -47,6 +54,9 @@ const Footer = () => {
               <Mail size={20} />
               <span>redeinfinitycursos@gmail.com</span>
             </div>
+            <BotaoUnidades to="/unidades">
+              Ver Unidades
+            </BotaoUnidades>
           </ContactInfo>
         </FooterColumn>
 
@@ -54,10 +64,10 @@ const Footer = () => {
           <h3>Redes Sociais</h3>
           <p>Siga-nos nas redes sociais e fique por dentro das novidades.</p>
           <SocialLinks>
-            <a href="https://www.instagram.com/infinitycursosofc/" aria-label="Instagram">
+            <a href="https://www.instagram.com/infinitycursosofc/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <Instagram size={24} />
             </a>
-            <a href="" aria-label="LinkedIn">
+            <a href="#" aria-label="LinkedIn">
               <Linkedin size={24} />
             </a>
           </SocialLinks>

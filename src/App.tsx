@@ -8,15 +8,17 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import CoursesPage from './components/CoursesPage';
 import CoursePresentation from './components/CoursePresentation';
+import Unidades from './components/Unidades'; // ✅ Agora usando a página real
 
 function App() {
   return (
     <Router>
-      <Header logoSrc='../public/Logotipo-vertical-normal.png'/>
+      <Header logoSrc="/Logotipo-vertical-normal.png" />
+      
       <Routes>
         <Route path="/" element={
           <>
-            <Hero heroImage= '../public/Logotipo-vertical-normal.png'/>
+            <Hero />
             <FeaturedCourses />
             <Stats />
             <Testimonials />
@@ -24,7 +26,9 @@ function App() {
         } />
         <Route path="/cursos" element={<CoursesPage />} />
         <Route path="/curso/:id" element={<CoursePresentation />} />
+        <Route path="/unidades" element={<Unidades />} />
       </Routes>
+      
       <Footer />
     </Router>
   );

@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const FooterSection = styled.footer`
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
   padding: 3rem 1rem 1.5rem;
-  
+  z-index: 0;
+
   @media (min-width: 768px) {
     padding: 4rem 2rem 2rem;
   }
@@ -19,6 +21,7 @@ export const FooterSection = styled.footer`
     height: 100%;
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2373b809' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     opacity: 0.5;
+    z-index: 0;
   }
 `;
 
@@ -29,17 +32,20 @@ export const FooterContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  
+  position: relative;   /* ✅ ADICIONE ISSO */
+  z-index: 1;            /* ✅ ESSENCIAL */
+
   @media (min-width: 481px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   @media (min-width: 969px) {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
 `;
+
 
 export const FooterColumn = styled.div`
   h3 {
@@ -47,7 +53,7 @@ export const FooterColumn = styled.div`
     font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 1.25rem;
-    
+
     @media (min-width: 768px) {
       font-size: 1.25rem;
       margin-bottom: 1.5rem;
@@ -58,7 +64,7 @@ export const FooterColumn = styled.div`
     color: #666;
     font-size: 0.95rem;
     line-height: 1.6;
-    
+
     @media (min-width: 768px) {
       font-size: 1rem;
     }
@@ -71,7 +77,7 @@ export const FooterLinks = styled.ul`
 
   li {
     margin-bottom: 0.6rem;
-    
+
     @media (min-width: 768px) {
       margin-bottom: 0.75rem;
     }
@@ -82,7 +88,7 @@ export const FooterLinks = styled.ul`
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 0.95rem;
-    
+
     @media (min-width: 768px) {
       font-size: 1rem;
     }
@@ -102,7 +108,7 @@ export const ContactInfo = styled.div`
     margin-bottom: 0.8rem;
     color: #666;
     font-size: 0.95rem;
-    
+
     @media (min-width: 768px) {
       gap: 0.75rem;
       margin-bottom: 1rem;
@@ -112,7 +118,7 @@ export const ContactInfo = styled.div`
     svg {
       color: #73b809;
       min-width: 18px;
-      
+
       @media (min-width: 768px) {
         min-width: 20px;
       }
@@ -123,7 +129,7 @@ export const ContactInfo = styled.div`
 export const SocialLinks = styled.div`
   display: flex;
   gap: 0.75rem;
-  
+
   @media (min-width: 768px) {
     gap: 1rem;
   }
@@ -132,7 +138,7 @@ export const SocialLinks = styled.div`
     color: #666;
     transition: all 0.3s ease;
     font-size: 1.25rem;
-    
+
     @media (min-width: 768px) {
       font-size: 1.4rem;
     }
@@ -151,10 +157,32 @@ export const FooterBottom = styled.div`
   text-align: center;
   color: #666;
   font-size: 0.85rem;
-  
+  position: relative;  /* ✅ */
+  z-index: 1;          /* ✅ */
+
   @media (min-width: 768px) {
     margin-top: 3rem;
     padding-top: 2rem;
     font-size: 0.9rem;
+  }
+`;
+
+
+export const BotaoUnidades = styled(Link)`
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #73b809;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    background-color: #5a9407;
+    transform: translateY(-2px);
   }
 `;

@@ -10,13 +10,8 @@ import {
   HeroImageContainer,
   Highlight
 } from '../styles/HeroStyles';
-import heroImage from '../../public/Logotipo-vertical-normal.png' 
 
-interface HeroProps {
-  heroImage: string;
-}
-
-const Hero: React.FC<HeroProps> = () => {
+const Hero: React.FC = () => {
   return (
     <div id='inicio'>
     <HeroContainer>
@@ -46,7 +41,7 @@ const Hero: React.FC<HeroProps> = () => {
 
         <HeroImageContainer>
           <img 
-            src={heroImage} 
+            src="/Logotipo-vertical-normal.png"
             alt="Alunos em ambiente profissional" 
           />
         </HeroImageContainer>

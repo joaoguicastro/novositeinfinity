@@ -23,12 +23,14 @@ const Header: React.FC<HeaderProps> = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const navItems = [
-    { text: 'Início', href: '#inicio' },
-    { text: 'Cursos', href: '/cursos' },
-    { text: 'Sobre', href: '#sobre' },
-    { text: 'Area do aluno', href: 'https://www.sistemasqis.com.br/supercursos_areaaluno/', external: true  },
-  ];
+const navItems = [
+  { text: 'Início', href: '#inicio' },
+  { text: 'Cursos', href: '/cursos' },
+  { text: 'Sobre', href: '#sobre' },
+  { text: 'Unidades', href: '/unidades' },
+  { text: 'Área do aluno', href: 'https://www.sistemasqis.com.br/supercursos_areaaluno/', external: true },
+];
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
