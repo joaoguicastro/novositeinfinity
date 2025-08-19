@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { db } from "../services/firebase"; // ajuste o caminho conforme a pasta
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Mail, User, CheckCircle } from 'lucide-react';
 import {
   Container,
@@ -27,7 +29,8 @@ import {
   NavButton,
   Footer,
   ProgressRoot,
-  ProgressIndicator
+  ProgressIndicator,
+  Select
 } from '../styles/Formulario.styles';
 import logo from '../../public/Logotipo-vertical-normal-2.png'
 
@@ -35,8 +38,7 @@ interface FormData {
   email: string;
   name: string;
   phone: string;
-  company: string;
-  experience: string;
+  cidade: string;
 }
 
 const Formulario = () => {
@@ -45,18 +47,22 @@ const Formulario = () => {
     email: '',
     name: '',
     phone: '',
-    company: '',
-    experience: ''
+    cidade: ''
   });
 
   const totalSteps = 3;
   const progress = (currentStep / totalSteps) * 100;
 
   const handleNext = () => {
-    if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1);
-    }
+  if (currentStep === 1 && !isValidEmail(formData.email)) {
+    alert('Digite um e-mail válido, ex: exemplo@gmail.com');
+    return;
+  }
+  if (currentStep < totalSteps) {
+    setCurrentStep(currentStep + 1);
+  }
   };
+
 
   const handlePrevious = () => {
     if (currentStep > 1) {
@@ -69,6 +75,11 @@ const Formulario = () => {
       ...prev,
       [field]: value
     }));
+  };
+
+  const isValidEmail = (email: string) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
   };
 
   const formatPhone = (value: string) => {
@@ -94,7 +105,7 @@ const Formulario = () => {
               </IconContainer>
               <StepTitle>Olá!</StepTitle>
               <StepDescription>
-                Precisamos de algumas informações para termos certeza qual é o programa mais adequado para o seu perfil.
+                Precisamos de algumas informações para que nossa equipe de consultores possa entrar em contato com voce.
               </StepDescription>
             </StepHeader>
             
@@ -108,7 +119,7 @@ const Formulario = () => {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  placeholder="seu@email.com"
+                  placeholder="seu-email@email.com"
                 />
               </FieldGroup>
             </FormFields>
@@ -153,6 +164,23 @@ const Formulario = () => {
                   maxLength={15}
                 />
               </FieldGroup>
+
+              <FieldGroup>
+                <StyledLabel htmlFor="cidade">
+                  Cidade
+                </StyledLabel>
+                <Select
+                  id="cidade"
+                  value={formData.cidade}
+                  onChange={(e) => handleInputChange('cidade', e.target.value)}
+                  
+                >
+                  <option value="">Selecione sua cidade</option>
+                  <option value="Fortaleza">Fortaleza</option>
+                  <option value="Maracanaú">Maracanaú</option>
+                  <option value="Caucaia">Caucaia</option>
+                </Select>
+              </FieldGroup>
             </FormFields>
           </StepContainer>
         );
@@ -166,7 +194,7 @@ const Formulario = () => {
               </IconContainer>
               <StepTitle>Tudo Pronto!</StepTitle>
               <StepDescription>
-                Obrigado pelas informações. Em breve entraremos em contato com você.
+                Obrigado pelas informações. Em breve um de nossos consultores entrará em contato com você.
               </StepDescription>
             </StepHeader>
           </StepContainer>
@@ -210,6 +238,7 @@ const Formulario = () => {
             {renderStep()}
             
             <Navigation>
+              {currentStep < 3 && (
               <NavButton
                 $variant="outline"
                 onClick={handlePrevious}
@@ -218,16 +247,33 @@ const Formulario = () => {
                 <ChevronLeft size={16} />
                 Anterior
               </NavButton>
+              )}
               
-              {currentStep < totalSteps ? (
+              {currentStep === 1 && (
                 <NavButton onClick={handleNext}>
                   Próximo
                   <ChevronRight size={16} />
                 </NavButton>
-              ) : (
+              )}
+
+              {currentStep === 2 && (
                 <NavButton
                   $variant="success"
-                  onClick={() => alert('Formulário enviado!')}
+                  onClick={async () => {
+                    if(!formData.name || !formData.email || !formData.phone || !formData.cidade) {
+                      alert('Por favor, preencha todos os campos antes de finalizar.');
+                      return;
+                    }
+
+                    await addDoc(collection(db, "leads"), {
+                      name: formData.name,
+                      email: formData.email,
+                      phone: formData.phone,
+                      cidade: formData.cidade,
+                      createdAt: Timestamp.now()
+                    });
+                    setCurrentStep(3);
+                  }}
                 >
                   Finalizar
                   <CheckCircle size={16} />

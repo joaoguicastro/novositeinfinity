@@ -28,7 +28,8 @@ const navItems = [
   { text: 'Cursos', href: '/cursos' },
   { text: 'Sobre', href: '#sobre' },
   { text: 'Unidades', href: '/unidades' },
-  { text: 'Área do aluno', href: 'https://www.sistemasqis.com.br/supercursos_areaaluno/', external: true },
+  { text: 'Área administrativa', href: '/login' },
+  { text: 'Área do aluno', href: 'https://www.sistemasqis.com.br/supercursos_areaaluno/', external: true }
 ];
 
 
@@ -39,19 +40,15 @@ const navItems = [
   const handleNavigation = (href: string, e: React.MouseEvent<Element, MouseEvent>) => {
     e.preventDefault();
     
-    // Verificar se é um link externo
     if (href.startsWith('http://') || href.startsWith('https://')) {
-      // Abrir em uma nova aba
       window.open(href, '_blank', 'noopener,noreferrer');
       setIsMobileMenuOpen(false);
       return;
     }
     
-    // Se for um link interno com #
     if (href.includes('#')) {
       const targetId = href.split('#')[1];
       
-      // Se já estamos na homepage, role para o elemento
       if (location.pathname === '/') {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
@@ -59,10 +56,7 @@ const navItems = [
           setIsMobileMenuOpen(false);
         }
       } else {
-        // Se não estamos na homepage, navegue primeiro para a homepage
-        // e depois role para o elemento após o carregamento
         navigate('/');
-        // Precisamos esperar até que a navegação seja concluída
         setTimeout(() => {
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
@@ -71,7 +65,6 @@ const navItems = [
         }, 100);
       }
     } else {
-      // Para outros links internos, apenas navegue normalmente
       navigate(href);
       setIsMobileMenuOpen(false);
     }

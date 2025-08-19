@@ -10,13 +10,14 @@ import CoursesPage from './components/CoursesPage';
 import CoursePresentation from './components/CoursePresentation';
 import Unidades from './components/Unidades';
 import Formulario from './components/Formulario';
+import Login from './pages/Login';
+import Admin from './pages/Admin';
 import { useEffect } from 'react';
 
-// 🔄 Novo componente com controle por rota
 const LayoutWithConditionalHeaderFooter = () => {
   const location = useLocation();
 
-  const hideLayoutOnRoutes = ['/formulario']; // rotas sem header/footer
+  const hideLayoutOnRoutes = ['/formulario', '/login', '/admin']; 
   const isLayoutHidden = hideLayoutOnRoutes.includes(location.pathname);
 
   useEffect(() => {
@@ -43,6 +44,8 @@ const LayoutWithConditionalHeaderFooter = () => {
         <Route path="/curso/:id" element={<CoursePresentation />} />
         <Route path="/unidades" element={<Unidades />} />
         <Route path="/formulario" element={<Formulario />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
 
       {!isLayoutHidden && <Footer />}

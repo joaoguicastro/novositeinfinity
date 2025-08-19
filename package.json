@@ -12,6 +12,8 @@
   "dependencies": {
     "@emotion/styled": "^11.14.0",
     "@radix-ui/react-progress": "^1.1.7",
+    "bootstrap": "^5.3.7",
+    "firebase": "^12.1.0",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
